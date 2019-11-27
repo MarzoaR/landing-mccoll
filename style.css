@@ -6,16 +6,31 @@ body{
 .txt-green{
   color: #6aad44;
 }
+.bg-green{
+  background-color: #6aad44;
+}
+.bg-green li a.nav-link{
+  color: #ffffff !important;
+}
+.bg-green li:hover{
+  background-color: #49bd07;
+}
 .btn-green{
   color: #ffffff;
   background-color: #6aad44;
   border-color: #6aad44;
   border-radius: 0;
+  width: 250px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .btn-green:hover{
   color: #ffffff;
   background-color: #49bd07;
   border-color: #49bd07;
+}
+a:hover{
+  text-decoration: none;
 }
 .px-0{
   padding-left: 0;
@@ -68,12 +83,14 @@ body{
 }
 #software h2::after{
   content: '02';
+  color: #d7d7d7;
 }
 #create h2::after{
   content: '03';
 }
 #assemble .title-number::after{
   content: '04';
+  color: #d7d7d7;
 }
 #transport h2::after{
   content: '05';
@@ -106,10 +123,9 @@ header h3::after{
   transform: translate(10px, 20px);
 }
 header{
-  background-image: url(./img/person.png);
+  background-image: url(./img/header2.png);
   background-color: #000000;
   background-position: center;
-  background-position-y: 10%;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 6vh);  
@@ -119,7 +135,109 @@ header{
 .production-img{
   max-height: 190px !important;
 }
+/* -------- DESIGN -------- */
+#img-design{
+  background-image: url(./img/design.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* -------- SOFTWARE   -------- */
+.sof-div{
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sof-div:nth-child(1){
+  background-image: url(./img/kitchen-cad.png);
+}
+.sof-div:nth-child(2){
+  background-image: url(./img/bathroom-cad.jpg);
+}
+.sof-div:nth-child(3){
+  background-image: url(./img/comercial-cad.jpg);
+}
+.sof-div:nth-child(1) h4,
+.sof-div:nth-child(2) h4,
+.sof-div:nth-child(3) h4{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
 
+/* -------- CREATE -------- */
+#img-create{
+  height: 600px;
+  background-image: url(./img/create.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* -------- ASSEMBLE, SOFTWARE -------- */
+#assemble, #software{
+  background-color: #f5f4f3;
+  position: relative;
+  z-index: -2;
+}
+/* -------- ASSEMBLE -------- */
+#img-assemble{
+  height: 600px;
+  background-image: url(./img/assemble.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* -------- TRANSPORT -------- */
+#img-transport{
+  height: 600px;
+  background-image: url(./img/transport.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*-------- INSTALATION --------*/
+#img-installation{
+  height: 600px;
+  background-image: url(./img/installation.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*-------- CONTACT --------*/
+.bg-contact{
+  background-color: #1d1d1d;
+  padding: 60px 20px;
+}
+label{
+  color: #adadad;
+}
+.form-control{
+  background-color: #393939;
+  border-radius: 0;
+  border: 1px solid #393939;
+  color: #adadad;
+  outline: none;
+}
+.form-control:focus{
+  background-color: #393939;
+  color: #adadad;
+  outline: none;
+}
+.form-control::placeholder{
+  font-size: 12px;
+}
+select{
+  background: url(./img/arrowdown.png) no-repeat;
+  background-position-x: right 1rem;
+  background-position-y: center;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance: none;
+}
+option .disabled{
+  color: #393939;
+}
 /* -------- FOOTER -------- */
 .txt-gray{
   color: #9a9a9a;
@@ -198,5 +316,53 @@ footer ul li a:hover,
   }
   header h3::after{
     transform: translate(10px, 10px);
+  }
+}
+
+/* menu */
+@media (min-width: 992px){
+  .menu-bigscreen{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #6aad44;
+    padding: 0 40px;
+    font-size: 11px;
+  }
+  .submenu-bigscreen{
+    background-color:black;
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+    font-size: 11px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 40px;
+  }
+  .submenu-bigscreen a,
+  .submenu-bigscreen a:hover{
+    color: #ffffff;
+  }
+  .submenu-bigscreen i{
+    padding: 0 10px;
+  }
+  .submenu-bigscreen span{
+    padding: 0 20px;
+  }
+  .dsp-mobile{
+    display: none;
+  }
+}
+@media (max-width: 991px){
+  .navbar{
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .submenu-bigscreen{
+    display: none;
+  }
+  .dsp-mobile{
+    display: block;
   }
 }
