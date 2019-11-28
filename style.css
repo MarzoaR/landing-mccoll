@@ -229,7 +229,7 @@ label{
 }
 select{
   background: url(./img/arrowdown.png) no-repeat;
-  background-position-x: right 1rem;
+  background-position-x: 98%;
   background-position-y: center;
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
