@@ -238,29 +238,29 @@
           <h3 class="subtitle-body text-white text-uppercase">Contact us</h3>
           <h2 class="title-body text-white">How Can We Help You?</h2>
           <span class="line-green mb-25"></span>
-          <form class="needs-validation" action="">
+          <form id="contactform" class="needs-validation">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="name" class="text-uppercase">Your Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name (Required)" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name (Required)" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="phone" class="text-uppercase">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" placeholder="Phone (Required)" required>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone (Required)" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="suburb" class="text-uppercase">Suburb</label>
-                <input type="text" class="form-control" id="suburb" placeholder="Suburb (Optional)">
+                <input type="text" class="form-control" id="suburb" name="suburb" placeholder="Suburb (Optional)">
               </div>
               <div class="form-group col-md-6">
                 <label for="email" class="text-uppercase">Your Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email (Required)" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email (Required)" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-12">
                 <label for="enquiry" class="text-uppercase">General Enquiry</label>
-                <select class="form-control" id="enquiry" required>
+                <select class="form-control" id="enquiry" name="enquiry" required>
                   <option selected disabled value="">-- Select Option --</option>
                   <option value="General Enquiry">General Enquiry</option>
                   <option value="Product Enquiry">Product Enquiry</option>
@@ -269,7 +269,7 @@
               </div>
               <div class="form-group col-12">
                 <label for="textenquiry" class="text-uppercase">General Enquiry</label>
-                <textarea class="form-control" id="textenquiry" rows="3" placeholder="Drop a line..." required></textarea>
+                <textarea class="form-control" id="textenquiry" name="textenquiry" rows="3" placeholder="Drop a line..." required></textarea>
               </div>
             </div>
             <button class="btn btn-green text-uppercase" type="submit">Contact Us</button>
@@ -335,24 +335,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-      </script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+  <script src="./send/contactform.js"></script>
 </body>
 </html>
