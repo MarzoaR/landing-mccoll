@@ -10,7 +10,7 @@ formulario.addEventListener('submit', function(e){
   
   var datos = new FormData(formulario);
 
-      fetch('/send/contactform.php',{
+      fetch('./send/contactform.php',{
         method: 'POST',
         body: datos
       })
@@ -18,6 +18,13 @@ formulario.addEventListener('submit', function(e){
         .then( data => {
           console.log(data);
           
+          if(data === '1'){
+            setTimeout(()=>{reset()}, 3000);            
+          }
+
+          function reset() {
+            formulario.reset();
+          }
           // if(data === '1'){
           //   if(sessionStorage.getItem("languaje")==="en"){
           //     menssage = "Data sent";
@@ -31,7 +38,7 @@ formulario.addEventListener('submit', function(e){
           //   setTimeout(function(){borrar()}, 3000);
           //   function borrar(){
           //     info.innerHTML = '';
-          //     formulario.reset();
+              // formulario.reset();
           //     //console.log("Se ejecuta el reset");
           //   }
           // }else{
